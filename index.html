@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,9 +17,9 @@
         <div class="header">
             <h1 class="logo">ROBO.SCHOOL</h1>
             <div class="nav">
-                <a href="">О школе</a>
+                <a href="#about">О школе</a>
                 <a href="">Тренеры</a>
-                <a href="">Стоимость</a>
+                <a href="#price-list">Стоимость</a>
             </div>
             <h2 class="number">+7 800 000 11 22</h2>
         </div>
@@ -33,7 +33,7 @@
             <img src="img/Group 211.png" alt="Нет картиночки">
         </div>
     </main>
-    <div class="info">
+    <div class="info" id="about">
         <p style="font-size: 1.4rem;"><b>Robo school &mdash; </b>учреждение для формирования кадрового педагогического резерва в сфере робототехники и программирования.</p>
         <div class="ach-grid">
             <div class="ach-block">
@@ -76,7 +76,8 @@
             </div>
         </div>
     </div>
-    <div class="price-list">
+    
+    <div class="price-list" id="price-list">
         <h2>Выберите нужный пакет</h2>
         <div class="price-grid">
             <div class="price-card">
@@ -99,6 +100,27 @@
             </div>
         </div>
     </div>
-    <footer></footer>
+    <div class="promo-section">
+        <div class="container">
+            <h2>Запишитесь на курс со скидкой 10%</h2>
+            <p>Акция действительна до 10 марта 2022 года</p>
+        </div>
+        <form action="">
+            <input type="text" name="" id="" placeholder="Имя">
+            <input type="text" name="" id="" placeholder="Телефон">
+            <input type="text" name="" id="" placeholder="E-mail">
+            <button>Оформить заявку</button>
+        </form>
+    </div>
+    <footer>
+        <div>
+            <h2>ROBO.SCHOOL</h2>
+            <p>© 2022 ROBO.SCHOOL</p>
+        </div>
+        <h2 class="foot_num">+7 800 000 11 22</h2>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
