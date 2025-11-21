@@ -2,6 +2,12 @@
     margin: 0;
 }
 
+
+body {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -10,7 +16,9 @@
 }
 
 main {
-    padding: 38px;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     background: #141024;
     color: white;
 }
@@ -50,11 +58,6 @@ main {
     --d-width: 100%; 
 }
 
-.sign-in {
-    background: #D52027;
-    color: white;
-}
-
 .main-block {
     display: flex;
     flex-direction: row;
@@ -80,6 +83,7 @@ main {
 .sign-up {
     background-color: red;
     border: 3px solid red;
+    border-radius: 1rem;
     color: white;
     width: 13rem;
     height: 4rem;
@@ -93,4 +97,187 @@ main {
     color: red;
     border: 3px solid red;
     cursor: pointer;
+}
+
+.info {
+    padding-top: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.ach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 30px;       /* Воздух между карточками */
+    width: 100%; 
+}
+
+.ach-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ach-block div {
+    color: red;
+    font-size: 3rem;
+}
+
+.ach-block p {
+    color: grey;
+    font-size: 1.2rem;
+}
+
+.gain {
+    padding-top: 4rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.gain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 3rem;       /* Воздух между карточками */
+    width: 100%; 
+}
+
+.gain-grid h3 {
+    font-size: 1.5rem;
+}
+
+.gain-grid p {
+    color: grey;
+    font-size: 1.2rem;
+}
+
+.practice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.practice p {
+    position: relative;
+    color: black;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center; /* Центр по горизонтали */
+    align-items: center;     /* Центр по вертикали */
+    border-radius: 50%;
+    /* 5. Сброс стандартных отступов параграфа (опционально) */
+    margin: 0;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.tooltip-text {
+    /* Позиционирование */
+    position: absolute;
+    bottom: 140%; /* Поднимаем над иконкой (100% + отступ) */
+    left: 50%;    /* Ставим левый край по центру иконки */
+    transform: translateX(-50%); /* Сдвигаем само окно назад на 50%, чтобы оно встало ровно по центру */
+    
+    /* Размеры и внешний вид */
+    width: 250px; /* Ширина подсказки */
+    background-color: white;
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+    
+    /* Тень (очень важно для эффекта "всплывания") */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    
+    /* Анимация скрытия */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease; /* Плавное появление */
+    
+    /* Чтобы мышка не мешала, если случайно заденет невидимый блок */
+    pointer-events: none; 
+}
+
+.practice p:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; /* Включаем взаимодействие, когда подсказка видима */
+}
+
+.price-list {
+    padding-top: 4rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 3rem;      
+    width: 100%; 
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    height: 20rem;
+    border: 2px solid lightgrey;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all ease 0.3s;
+}
+
+.price-card:hover {
+    background-color: #141024;
+    transform: scale(1.1);
+    color: white;
+}
+
+.price-card h2 {
+    font-size: 2.7rem;
+}
+
+.price-card h3 {
+    font-size: 2.5rem;
+}
+
+.price-card p {
+    color: grey;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.price-btn {
+    background-color: red;
+    border-radius: 1rem;
+    border: red;
+    color: white;
+    width: 13rem;
+    height: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
 }
