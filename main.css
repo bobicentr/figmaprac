@@ -297,6 +297,7 @@ main {
 
 .promo-section::after {
     content: "% % % % % % % % % % % % % % % %";
+    z-index: 0;
     position: absolute;
     
     /* Было -40px -> Стало -2.5rem */
@@ -348,12 +349,19 @@ form input {
 }
 
 form button {
+    z-index: 1;
     background-color: #141024;
     color: white;
     border: none;
     border-radius: 0.5rem;
     height: 3.5rem;
     cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+form button:hover {
+    background-color: white;
+    color: red;
 }
 
 footer {
